@@ -1,4 +1,4 @@
-# Overnight Quality Control Addendum — through 2026-09-06 15:20 CT
+# Overnight Quality Control Addendum — through 2026-09-06 16:18 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
@@ -19,7 +19,7 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 14:21 CT
+## DELTA SINCE 15:20 CT
 No relevant application-code branch head, main SHA, Mission 1A/Mission 1B/combined-cert PR state, or combined-cert head changed during this audit window.
 
 Fresh verification confirms:
