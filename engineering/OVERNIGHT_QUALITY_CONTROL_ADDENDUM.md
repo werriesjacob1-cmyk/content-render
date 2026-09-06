@@ -1,15 +1,15 @@
-# Overnight Quality Control Addendum — through 2026-09-06 11:16 CT
+# Overnight Quality Control Addendum — through 2026-09-06 12:19 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
 ## LIVE STATE
 - `origin/main`: `6a045e50a33408ecafdfa21c9ff951d731347bd9` — freshly reverified unchanged.
-- Claude Writer V2.1 base: `claude/writer-v2-traceability-repair-01` @ `2256f229be0c5b245cb5c1a2ec7cd4b0d8b3c2e6` — unchanged.
-- SuperChad takeover: `superchad/writer-v2-semantic-failclosed-01` @ `5669d2d3f7d3a0865ba69d6cc42aa0fa3d09c3d5` — unchanged.
-- Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — unchanged.
-- Mission 1A: `claude/p0-manifest-semantic-merge-01` @ `04ef8a3f6f23ff1aaef22482c89767612494f9ab` — unchanged; PR #57 remains open/draft against `main`.
-- Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — unchanged; PR #58 remains open/draft against `main`.
-- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — unchanged; PR #60 remains open/draft against `main`.
+- Claude Writer V2.1 base: `claude/writer-v2-traceability-repair-01` @ `2256f229be0c5b245cb5c1a2ec7cd4b0d8b3c2e6` — unchanged from prior checkpoint.
+- SuperChad takeover: `superchad/writer-v2-semantic-failclosed-01` @ `5669d2d3f7d3a0865ba69d6cc42aa0fa3d09c3d5` — unchanged from prior checkpoint.
+- Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — unchanged from prior checkpoint.
+- Mission 1A: `claude/p0-manifest-semantic-merge-01` @ `04ef8a3f6f23ff1aaef22482c89767612494f9ab` — freshly reverified unchanged; PR #57 remains open/draft against `main`.
+- Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — freshly reverified unchanged; PR #58 remains open/draft against `main`.
+- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — freshly reverified unchanged.
 - PR #57 still says `DO NOT MERGE` and identifies the Claude Writer branch as base authority while targeting `main`.
 - Main remains untouched. No merge/deploy/publish/render/provider-backed generation observed in this audit window.
 
@@ -20,8 +20,8 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 10:16 CT
-No relevant application-code branch head, PR state, PR base/head topology, or main SHA changed during this audit window.
+## DELTA SINCE 11:16 CT
+No relevant application-code branch head, main SHA, or Mission 1A/Mission 1B PR state changed during this audit window.
 
 Freshly reverified from current repository/PR state:
 - `main` remains `6a045e50...`;
@@ -29,10 +29,7 @@ Freshly reverified from current repository/PR state:
 - Mission 1B remains `4e014946...`;
 - combined certification remains `c46532af...`;
 - PR #57 remains draft/open against `main`;
-- PR #58 remains draft/open against `main`;
-- PR #60 remains draft/open against `main`;
-- takeover PR #56 remains draft/open against the Claude Writer V2.1 branch;
-- quality-stack PR #55 remains draft/open against `main`.
+- PR #58 remains draft/open against `main`.
 
 No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
 
@@ -49,7 +46,7 @@ WARNING — unchanged.
 DRIFTING / BLOCKED — unchanged pending explicit reconciliation of authorization and review topology.
 
 ## SECURITY
-Main still points at commit `6a045e50...`, whose commit message and current design explicitly describe the generic `branch_recon.yml` as checking out arbitrary refs/scripts with GROQ_API_KEY/GEMINI_API_KEY available. Mission 1B contains the hardened zero-secret alternative, but the default-branch runner remains unintegrated.
+Main still points at commit `6a045e50...`, whose current design describes the generic `branch_recon.yml` as checking out arbitrary refs/scripts with GROQ_API_KEY/GEMINI_API_KEY available. Mission 1B contains the hardened zero-secret alternative, but the default-branch runner remains unintegrated.
 
 Until explicitly authorized integration lands, do not use main's generic branch runner for secret-backed arbitrary branch diagnostics.
 
