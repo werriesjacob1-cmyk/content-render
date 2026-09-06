@@ -1,12 +1,12 @@
-# Overnight Quality Control Addendum — through 2026-09-05 19:18 CT
+# Overnight Quality Control Addendum — through 2026-09-05 20:20 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
 ## LIVE STATE
 - `origin/main`: `6a045e50a33408ecafdfa21c9ff951d731347bd9` — freshly reverified unchanged.
-- Claude Writer V2.1 base: `claude/writer-v2-traceability-repair-01` @ `2256f229be0c5b245cb5c1a2ec7cd4b0d8b3c2e6` — unchanged from prior checkpoint.
-- SuperChad takeover: `superchad/writer-v2-semantic-failclosed-01` @ `5669d2d3f7d3a0865ba69d6cc42aa0fa3d09c3d5` — unchanged from prior checkpoint.
-- Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — unchanged from prior checkpoint.
+- Claude Writer V2.1 base: `claude/writer-v2-traceability-repair-01` @ `2256f229be0c5b245cb5c1a2ec7cd4b0d8b3c2e6` — freshly reverified unchanged.
+- SuperChad takeover: `superchad/writer-v2-semantic-failclosed-01` @ `5669d2d3f7d3a0865ba69d6cc42aa0fa3d09c3d5` — freshly reverified unchanged.
+- Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — freshly reverified unchanged.
 - Mission 1A: `claude/p0-manifest-semantic-merge-01` @ `04ef8a3f6f23ff1aaef22482c89767612494f9ab` — freshly reverified unchanged.
 - Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — freshly reverified unchanged.
 - Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — freshly reverified unchanged.
@@ -19,15 +19,17 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 18:20 CT
+## DELTA SINCE 19:18 CT
 No application-code branch head changed during this audit window.
 
 Freshly reverified:
 - `main` remains `6a045e50...`;
+- Claude Writer V2.1 remains `2256f229...`;
+- SuperChad takeover remains `5669d2d3...`;
+- quality stack remains `8d93f4e7...`;
 - Mission 1A remains `04ef8a3f...`;
 - Mission 1B remains `4e014946...`;
-- combined integration-cert remains `c46532af...`;
-- the repository branch listing shows no newer replacement branch for the currently authorized Mission 1A / 1B / combined-cert surfaces.
+- combined integration-cert remains `c46532af...`.
 
 PR topology remains unchanged:
 - PR #57 is still OPEN + DRAFT, base `main`, head `claude/p0-manifest-semantic-merge-01 @ 04ef8a3f...`; its body still says `DO NOT MERGE` and names `claude/writer-v2-traceability-repair-01 @ 2256f22...` as base authority.
