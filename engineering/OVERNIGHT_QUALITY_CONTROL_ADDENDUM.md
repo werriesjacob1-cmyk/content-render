@@ -1,4 +1,4 @@
-# Overnight Quality Control Addendum — through 2026-09-06 09:19 CT
+# Overnight Quality Control Addendum — through 2026-09-06 10:16 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
@@ -20,7 +20,7 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 08:21 CT
+## DELTA SINCE 09:19 CT
 No relevant application-code branch head or PR topology changed during this audit window.
 
 Freshly reverified:
@@ -29,9 +29,9 @@ Freshly reverified:
 - takeover remains `5669d2d3...`;
 - quality stack remains `8d93f4e7...`;
 - Mission 1A remains `04ef8a3f...`;
-- PR #57 remains draft/open against `main`;
-- PR #58 remains draft/open against `main` at `4e014946...`;
-- PR #60 remains draft/open against `main` at `c46532af...`.
+- PR #57 remains draft/open against `main`, 34 changed files, with its own `DO NOT MERGE` warning intact;
+- PR #58 remains draft/open against `main` at `4e014946...`, 3 changed files;
+- PR #60 remains draft/open against `main` at `c46532af...`, 37 changed files.
 
 No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
 
