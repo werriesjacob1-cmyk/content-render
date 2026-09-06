@@ -1,15 +1,15 @@
-# Overnight Quality Control Addendum — through 2026-09-06 04:20 CT
+# Overnight Quality Control Addendum — through 2026-09-06 05:17 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
 ## LIVE STATE
 - `origin/main`: `6a045e50a33408ecafdfa21c9ff951d731347bd9` — freshly reverified unchanged.
-- Claude Writer V2.1 base: `claude/writer-v2-traceability-repair-01` @ `2256f229be0c5b245cb5c1a2ec7cd4b0d8b3c2e6` — freshly reverified unchanged.
-- SuperChad takeover: `superchad/writer-v2-semantic-failclosed-01` @ `5669d2d3f7d3a0865ba69d6cc42aa0fa3d09c3d5` — freshly reverified unchanged.
-- Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — no evidence of movement since the prior checkpoint.
+- Claude Writer V2.1 base: `claude/writer-v2-traceability-repair-01` @ `2256f229be0c5b245cb5c1a2ec7cd4b0d8b3c2e6` — no evidence of movement since prior checkpoint.
+- SuperChad takeover: `superchad/writer-v2-semantic-failclosed-01` @ `5669d2d3f7d3a0865ba69d6cc42aa0fa3d09c3d5` — no evidence of movement since prior checkpoint.
+- Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — no evidence of movement since prior checkpoint.
 - Mission 1A: `claude/p0-manifest-semantic-merge-01` @ `04ef8a3f6f23ff1aaef22482c89767612494f9ab` — freshly reverified unchanged.
-- Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — no evidence of movement since the prior checkpoint.
-- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — no evidence of movement since the prior checkpoint.
+- Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — freshly reverified unchanged.
+- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — freshly reverified unchanged.
 - Main remains untouched. No merge/deploy/publish/render/provider-backed generation observed in this audit window.
 
 ## AUTHORIZED ROADMAP SLICE
@@ -19,16 +19,20 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 03:17 CT
-No application-code branch head changed during this audit window.
+## DELTA SINCE 04:20 CT
+No relevant application-code branch head changed during this audit window.
 
-PR #57 was freshly rechecked and is still OPEN + DRAFT, head `claude/p0-manifest-semantic-merge-01 @ 04ef8a3f...`, base `main @ 6a045e50...`, 34 changed files / 87 commits. Its body still identifies `claude/writer-v2-traceability-repair-01 @ 2256f22...` as the base authority and says `DO NOT MERGE`, so the review-topology mismatch remains unresolved.
+Freshly reverified:
+- `main` remains `6a045e50...`;
+- Mission 1A remains `04ef8a3f...`;
+- Mission 1B remains `4e014946...`;
+- combined integration-cert remains `c46532af...`.
 
 No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
 
 ## CURRENT WARNINGS
 ### STOP WARNING — GOVERNANCE / REVIEW TOPOLOGY STILL OPEN
-Unchanged. Mission 1B and combined certification exist and were technically green from prior evidence, but the recorded Mission 1A authorization/review gate was not formally closed first. PR #57 remains the known broad direct-to-main review surface despite its non-main Writer base authority and explicit `DO NOT MERGE` status.
+Unchanged. Mission 1B and combined certification exist and were technically green from prior evidence, but the recorded Mission 1A authorization/review gate was not formally closed first. The stale Mission 1A direct-to-main review topology remains the known governance defect until explicitly corrected or closed.
 
 Do not treat branch existence, draft PRs, synthetic integration surfaces, or green CI as authorization to merge or advance.
 
