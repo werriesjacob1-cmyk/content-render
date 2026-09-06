@@ -1,15 +1,16 @@
-# Overnight Quality Control Addendum — through 2026-09-06 16:18 CT
+# Overnight Quality Control Addendum — through 2026-09-06 17:18 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
 ## LIVE STATE
 - `origin/main`: `6a045e50a33408ecafdfa21c9ff951d731347bd9` — freshly reverified unchanged.
-- Claude Writer V2.1 base: `claude/writer-v2-traceability-repair-01` @ `2256f229be0c5b245cb5c1a2ec7cd4b0d8b3c2e6` — unchanged from canonical checkpoint.
+- Claude Writer V2.1 base: `claude/writer-v2-traceability-repair-01` @ `2256f229be0c5b245cb5c1a2ec7cd4b0d8b3c2e6` — unchanged.
 - SuperChad takeover: `superchad/writer-v2-semantic-failclosed-01` @ `5669d2d3f7d3a0865ba69d6cc42aa0fa3d09c3d5` — unchanged from canonical checkpoint.
 - Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — unchanged from canonical checkpoint.
-- Mission 1A: `claude/p0-manifest-semantic-merge-01` @ `04ef8a3f6f23ff1aaef22482c89767612494f9ab` — freshly reverified unchanged; PR #57 remains open/draft against `main` and still says `DO NOT MERGE` while identifying the Claude Writer branch as base authority.
-- Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — freshly reverified unchanged; PR #58 remains open/draft against `main` and `DO NOT MERGE`.
-- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — freshly reverified unchanged; PR #60 remains open/draft against `main` and `DO NOT MERGE`.
+- Mission 1A: `claude/p0-manifest-semantic-merge-01` @ `04ef8a3f6f23ff1aaef22482c89767612494f9ab` — unchanged; PR #57 remains open/draft against `main`, explicitly `DO NOT MERGE`, while its body identifies the Claude Writer branch as base authority.
+- Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — unchanged; PR #58 remains open/draft against `main` and `DO NOT MERGE`.
+- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — unchanged; PR #60 remains open/draft against `main` and `DO NOT MERGE`.
+- Audit/control branch before this write: `superchad/overnight-quality-control-01` @ `23555f4686897df14540c889cbbfb364c3d94521`.
 - Main remains untouched. No merge/deploy/publish/render/provider-backed generation was observed in this audit window.
 
 ## AUTHORIZED ROADMAP SLICE
@@ -19,17 +20,18 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 15:20 CT
+## DELTA SINCE 16:18 CT
 No relevant application-code branch head, main SHA, Mission 1A/Mission 1B/combined-cert PR state, or combined-cert head changed during this audit window.
 
 Fresh verification confirms:
 - `main` remains `6a045e50...`;
+- Claude Writer base remains `2256f229...`;
 - Mission 1A remains `04ef8a3f...`;
 - Mission 1B remains `4e014946...`;
 - combined certification remains `c46532af...`;
-- PR #57 remains draft/open against `main`;
-- PR #58 remains draft/open against `main`;
-- PR #60 remains draft/open against `main`.
+- PR #57 remains draft/open against `main`, head `04ef8a3f...`, 34 changed files, 87 commits;
+- PR #58 remains draft/open against `main`, head `4e014946...`, 3 changed files, 7 commits;
+- PR #60 remains draft/open against `main`, head `c46532af...`, 37 changed files, 91 commits.
 
 No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
 
@@ -52,6 +54,8 @@ Until explicitly authorized integration lands, do not use main's generic branch 
 
 ## CORRECTNESS / PROVENANCE
 No new correctness regression, test weakening, provenance loss, raw file-copy integration, accidental publish/render enablement, or production mutation was observed in this window. Existing Mission 1A correctness evidence and Mission 1B/integration security evidence remain the latest technical evidence.
+
+The PR topology remains materially asymmetric: PR #57 presents the inherited Writer stack plus Mission 1A as a 34-file/87-commit direct-to-main surface even though its own declared base authority is the Claude Writer branch; PR #58 remains the narrow 3-file Mission 1B surface; PR #60 remains the deliberately synthetic 37-file combined certification surface. This is review evidence, not an approved integration plan.
 
 ## CREATIVE QUALITY
 No new live scripts or renders were observed, so there is no new evidence on hook quality, first-8-second escalation, spoken naturalness, information gain, visual specificity, payoff, sound/pacing, AI smell, or postability. Writer promotion remains unearned.
