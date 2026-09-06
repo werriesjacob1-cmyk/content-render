@@ -1,4 +1,4 @@
-# Overnight Quality Control Addendum — through 2026-09-06 13:19 CT
+# Overnight Quality Control Addendum — through 2026-09-06 14:21 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
@@ -9,7 +9,7 @@ Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CO
 - Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — unchanged.
 - Mission 1A: `claude/p0-manifest-semantic-merge-01` @ `04ef8a3f6f23ff1aaef22482c89767612494f9ab` — unchanged; PR #57 remains open/draft against `main` and still says `DO NOT MERGE` while identifying the Claude Writer branch as base authority.
 - Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — unchanged; PR #58 remains open/draft against `main` and `DO NOT MERGE`.
-- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — unchanged.
+- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — unchanged; PR #60 remains open/draft against `main` and `DO NOT MERGE`.
 - Main remains untouched. No merge/deploy/publish/render/provider-backed generation was observed in this audit window.
 
 ## AUTHORIZED ROADMAP SLICE
@@ -19,16 +19,20 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 12:19 CT
-No relevant application-code branch head, main SHA, Mission 1A/Mission 1B PR state, or combined-cert head changed during this audit window.
+## DELTA SINCE 13:19 CT
+No relevant application-code branch head, main SHA, Mission 1A/Mission 1B/combined-cert PR state, or combined-cert head changed during this audit window.
 
 Fresh verification confirms:
 - `main` remains `6a045e50...`;
+- Claude Writer base remains `2256f229...`;
+- SuperChad takeover remains `5669d2d3...`;
+- quality stack remains `8d93f4e7...`;
 - Mission 1A remains `04ef8a3f...`;
 - Mission 1B remains `4e014946...`;
 - combined certification remains `c46532af...`;
 - PR #57 remains draft/open against `main`;
-- PR #58 remains draft/open against `main`.
+- PR #58 remains draft/open against `main`;
+- PR #60 remains draft/open against `main`.
 
 No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
 
