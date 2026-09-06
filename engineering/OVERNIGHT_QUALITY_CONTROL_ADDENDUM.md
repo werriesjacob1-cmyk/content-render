@@ -1,4 +1,4 @@
-# Overnight Quality Control Addendum — through 2026-09-06 01:17 CT
+# Overnight Quality Control Addendum — through 2026-09-06 02:19 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
@@ -19,14 +19,16 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 00:21 CT
+## DELTA SINCE 01:17 CT
 No application-code branch head changed during this audit window.
 
-Fresh branch-head verification confirms the same technical state recorded previously. PR #57 remains open/draft, headed by `claude/p0-manifest-semantic-merge-01 @ 04ef8a3f...` and still based directly on `main @ 6a045e50...`. No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
+PR #57 was freshly rechecked and is still OPEN + DRAFT, head `claude/p0-manifest-semantic-merge-01 @ 04ef8a3f...`, base `main @ 6a045e50...`, 34 changed files / 87 commits. Its body still identifies `claude/writer-v2-traceability-repair-01 @ 2256f22...` as the base authority and says `DO NOT MERGE`, so the review-topology mismatch remains unresolved.
+
+No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
 
 ## CURRENT WARNINGS
 ### STOP WARNING — GOVERNANCE / REVIEW TOPOLOGY STILL OPEN
-Unchanged. Mission 1B and combined certification exist and were technically green from prior evidence, but the recorded Mission 1A authorization/review gate was not formally closed first. PR #57 remains the known broad direct-to-main review surface even though its own body identifies a non-main Writer base authority and says `DO NOT MERGE`.
+Unchanged. Mission 1B and combined certification exist and were technically green from prior evidence, but the recorded Mission 1A authorization/review gate was not formally closed first. PR #57 remains the known broad direct-to-main review surface despite its non-main Writer base authority and explicit `DO NOT MERGE` status.
 
 Do not treat branch existence, draft PRs, synthetic integration surfaces, or green CI as authorization to merge or advance.
 
