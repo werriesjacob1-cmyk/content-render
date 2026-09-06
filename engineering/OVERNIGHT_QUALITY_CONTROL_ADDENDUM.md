@@ -1,4 +1,4 @@
-# Overnight Quality Control Addendum — through 2026-09-05 23:18 CT
+# Overnight Quality Control Addendum — through 2026-09-06 00:21 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
@@ -19,19 +19,14 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 22:17 CT
+## DELTA SINCE 23:18 CT
 No application-code branch head changed during this audit window.
 
-Freshly reverified PR topology:
-- PR #57: OPEN + DRAFT, base `main`, head `claude/p0-manifest-semantic-merge-01 @ 04ef8a3f...`; body still says `DO NOT MERGE` and names `claude/writer-v2-traceability-repair-01 @ 2256f22...` as base authority.
-- PR #58: OPEN + DRAFT, base `main`, head `superchad/mission-1b-branch-recon-hardening-01 @ 4e014946...`; body still says `DO NOT MERGE` and requires Jacob authorization.
-- PR #60: OPEN + DRAFT, base `main`, head `superchad/mission-1ab-integration-cert-02 @ c46532af...`; body still says `DO NOT MERGE` and requires Jacob authorization.
-
-No relevant head moved, so no new exact-head CI was required. Existing green exact-head evidence remains technical evidence only, not authorization.
+Fresh branch-head verification confirms the same technical state recorded previously. No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
 
 ## CURRENT WARNINGS
 ### STOP WARNING — GOVERNANCE / REVIEW TOPOLOGY STILL OPEN
-Unchanged. Mission 1B and combined certification exist and were technically green from prior evidence, but the recorded Mission 1A authorization/review gate was not formally closed first. PR #57 remains a broad direct-to-main review surface even though its own body identifies a non-main Writer base authority.
+Unchanged. Mission 1B and combined certification exist and were technically green from prior evidence, but the recorded Mission 1A authorization/review gate was not formally closed first. PR #57 remains the known broad direct-to-main review surface even though its own body identifies a non-main Writer base authority.
 
 Do not treat branch existence, draft PRs, synthetic integration surfaces, or green CI as authorization to merge or advance.
 
@@ -42,7 +37,7 @@ WARNING — unchanged.
 DRIFTING / BLOCKED — unchanged pending explicit reconciliation of authorization and review topology.
 
 ## SECURITY
-Main still contains the original generic `branch_recon.yml` risk because `main` has not moved. Mission 1B contains the hardened zero-secret alternative, but the default-branch runner remains unintegrated.
+Main still points at commit `6a045e50...`, whose generic `branch_recon.yml` design exposes Groq/Gemini secrets to arbitrary checked-out refs/scripts. Mission 1B contains the hardened zero-secret alternative, but the default-branch runner remains unintegrated.
 
 Until explicitly authorized integration lands, do not use main's generic branch runner for secret-backed arbitrary branch diagnostics.
 
