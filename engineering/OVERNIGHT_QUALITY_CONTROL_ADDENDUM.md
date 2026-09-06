@@ -1,4 +1,4 @@
-# Overnight Quality Control Addendum — through 2026-09-06 06:21 CT
+# Overnight Quality Control Addendum — through 2026-09-06 07:21 CT
 
 Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CONTROL.md`.
 
@@ -9,7 +9,7 @@ Canonical shadow-audit continuation. Read with `engineering/OVERNIGHT_QUALITY_CO
 - Quality stack: `superchad/quality-stack-integration-01` @ `8d93f4e71489674f4bc95aade72f9c411620d30b` — freshly reverified unchanged.
 - Mission 1A: `claude/p0-manifest-semantic-merge-01` @ `04ef8a3f6f23ff1aaef22482c89767612494f9ab` — freshly reverified unchanged.
 - Mission 1B: `superchad/mission-1b-branch-recon-hardening-01` @ `4e014946cf106d9d3457259c481f10ebfb8dbd41` — PR #58 remains open/draft, unchanged.
-- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — PR #60 remains open/draft, unchanged.
+- Combined integration-cert: `superchad/mission-1ab-integration-cert-02` @ `c46532af91bb55696b4cfafc7a7ece38cf3b99ae` — unchanged.
 - PR #57 remains open/draft directly against `main`, head `04ef8a3f...`; its own body still says `DO NOT MERGE` and names the Claude Writer branch as base authority.
 - Main remains untouched. No merge/deploy/publish/render/provider-backed generation observed in this audit window.
 
@@ -20,7 +20,7 @@ The last durable checkpoint remains authoritative:
 3. correct or close stale Mission 1A PR topology;
 4. do not advance to live Writer/provider testing, promotion, render, deploy, publish, or another implementation slice until governance/review state is reconciled.
 
-## DELTA SINCE 05:17 CT
+## DELTA SINCE 06:21 CT
 No relevant application-code branch head or PR topology changed during this audit window.
 
 Freshly reverified:
@@ -29,9 +29,10 @@ Freshly reverified:
 - takeover remains `5669d2d3...`;
 - quality stack remains `8d93f4e7...`;
 - Mission 1A remains `04ef8a3f...`;
+- Mission 1B remains `4e014946...`;
+- combined integration-cert remains `c46532af...`;
 - PR #57 remains draft/open against `main`;
-- PR #58 remains draft/open at `4e014946...`;
-- PR #60 remains draft/open at `c46532af...`.
+- PR #58 remains draft/open against `main`.
 
 No new exact-head CI was required because no relevant implementation head moved. Existing green exact-head evidence remains technical evidence only, not authorization.
 
